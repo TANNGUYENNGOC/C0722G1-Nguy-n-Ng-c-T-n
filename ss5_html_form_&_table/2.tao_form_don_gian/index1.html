@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng kí học viên</title>
+</head>
+<style>
+    table tr, table th, table td {
+        border: 10px;
+    }
+    table td {
+        color: blue;
+    }
+</style>
+<body>
+<div style="background-color: orange">
+
+<form action="">
+    <h2 style="background-color: aquamarine; color: blue"; >ĐĂNG KÍ HỌC VIÊN</h2>
+
+    <table>
+        <tr>
+            <td style="width: 30%">Họ và tên</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Ngày sinh</td>
+            <td><input type="text" name="ngaysinh"></td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td style="color: black"><input type="radio" name="gender">Nam
+                <input type="radio" name="gender" value="Nữ">Nữ</td>
+        </tr>
+        <tr>
+            <td>Địa chỉ</td>
+            <td><textarea name="address" id="" cols="30" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td>Lớp</td>
+            <td><select name="Lop">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Đăng kí">
+                <input type="reset" value="Nhập lại"></td>
+        </tr>
+    </table>
+
+
+</form>
+</div>
+</body>
+</html>
