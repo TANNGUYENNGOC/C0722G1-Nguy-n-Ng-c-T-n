@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form action="">
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="text" id="Currency"></td>
+            <td>
+                <select name="" id="sel1">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+
+                </select>
+                </td>
+            <td>
+                <select name="" id="sel2">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+
+                </select>
+            </td>
+            <td>
+                <button onclick="chuyenDoiTienTe()" >submit</button>
+            </td>
+        </tr>
+
+
+
+    </table>
+</form>
+<!--<label id="endLab"></label>-->
+<p id="endLab"></p>
+
+</body>
+<script>
+    function chuyenDoiTienTe() {
+        let valueDauVao = document.getElementById("Currency").value;
+        valueDauVao = Number(valueDauVao);
+        let a = document.getElementById("sel1");
+        let b = document.getElementById("sel2");
+
+        if((a.value === "USD") && (b.value === "VND")) {
+            valueDauVao = valueDauVao*23000;
+            // alert(valueDauVao);
+            document.getElementById("endLab").innerHTML = 'to :' +valueDauVao;
+            // document.write(valueDauVao);
+        }
+            else if ((a.value === "VND") && (b.value === "USD")) {
+                valueDauVao = valueDauVao / 23000;
+                // alert(valueDauVao)
+
+            document.getElementById("endLab").innerHTML = valueDauVao;
+
+        } else  if (((a.value === "VND") && (b.value === "VND")) || ((a.value === "USD") && (b.value === "USD"))) {
+                // alert(valueDauVao);
+            document.getElementById("endLab").innerHTML = valueDauVao;
+
+        }
+    }
+
+
+
+</script>
+</html>
