@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<form action="">
+    <table>
+        <tr>
+            <td><input type="text" id="soThuNhat" placeholder="Nhập số thứ nhất"></td>
+            <td><input type="text" id="soThuHai" placeholder="Nhập số thứ hai"></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><input type="button" value="Addition(+)" onclick="cong()"></td>
+            <td><input type="button" value="Subtraction(-)" onclick="tru()"></td>
+            <td><input type="button" value="Multiplication(X)" onclick="nhan()"></td>
+            <td><input type="button" value="Division(/)" onclick="chia()"></td>
+        </tr>
+        <tr>
+            <td>
+                <p id="ketQua">Kết quả: </p>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+<script !src="">
+    function cong() {
+        let a = document.getElementById("soThuNhat").value;
+        a = Number(a);
+
+        let b = document.getElementById("soThuHai").value;
+        b = Number(b);
+
+        document.getElementById("ketQua").innerHTML = "Kết quả phép cộng: " + (a+b);
+
+    }
+    function tru() {
+        let a = document.getElementById("soThuNhat").value;
+        a = Number(a);
+
+        let b = document.getElementById("soThuHai").value;
+        b = Number(b);
+
+        document.getElementById("ketQua").innerHTML = "Kết quả phép trừ: " + (a-b);
+
+    }
+    function chia() {
+        let a = document.getElementById("soThuNhat").value;
+        a = Number(a);
+
+        let b = document.getElementById("soThuHai").value;
+        b = Number(b);
+
+        document.getElementById("ketQua").innerHTML = "Kết quả phép chia: " + (a/b);
+
+    }
+    function nhan() {
+        let a = document.getElementById("soThuNhat").value;
+        a = Number(a);
+
+        let b = document.getElementById("soThuHai").value;
+        b = Number(b);
+
+        document.getElementById("ketQua").innerHTML = "Kết quả phép nhân: " + (a*b);
+
+    }
+
+</script>
+</html>
