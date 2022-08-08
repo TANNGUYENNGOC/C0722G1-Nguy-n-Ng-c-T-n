@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng</title>
+</head>
+
+<body>
+<form action="">
+    <input type="text" id="cannang" placeholder="Nhập cân nặng (kg)"> <br><br>
+    <input type="text" id="chieucao" placeholder="Nhập chiều cao (met)"> <br>
+
+    <p class="button"><input type="button"  value="Kick Me!" onclick="chiSoBMI()">
+    </p>
+    <p id="ketQua"></p>
+
+</form>
+</body>
+<script !src="">
+    function chiSoBMI() {
+        // alert("ggg")
+        let canNang = document.getElementById("cannang").value;
+        canNang = Number(canNang);
+
+        let chieuCao = document.getElementById("chieucao").value;
+        chieuCao = Number(chieuCao);
+
+        let bmi = canNang / (chieuCao ^ 2);
+        // alert(bmi)
+        let ketQua = "";
+
+        if (bmi < 18) {
+            ketQua = "Underweight";
+        } else if (bmi < 25.0) {
+            // alert("fsdfs")
+            // document.write("Normal");
+            ketQua = "Normal";
+        } else if (bmi < 30.0) {
+            // document.write("Overweight");
+            ketQua = "Overweight";
+        } else {
+            // document.write("Obese");
+            ketQua = "Obese";
+        }
+
+        document.getElementById("ketQua").innerHTML = "chỉ số BMI: " + bmi + " "+ ketQua;
+    }
+
+
+</script>
+</html>
