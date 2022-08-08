@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Chuyển đổi tiền tệ</title>
 </head>
+<style>
+    table td {
+        text-align: center;
+    }
+</style>
 <body>
 <form action="">
     <table>
@@ -30,7 +35,8 @@
                 </select>
             </td>
             <td>
-                <button onclick="chuyenDoiTienTe()" >submit</button>
+                 <button type="button" onclick="chuyenDoiTienTe()"  style="color: white; background-color: blueviolet; border: blueviolet">Convert</button>
+<!--                <input type="button" value="">-->
             </td>
         </tr>
 
@@ -51,12 +57,11 @@
 
         if((a.value === "USD") && (b.value === "VND")) {
             valueDauVao = valueDauVao*23000;
-            // alert(valueDauVao);
             document.getElementById("endLab").innerHTML = 'to :' +valueDauVao;
-            // document.write(valueDauVao);
+
         }
             else if ((a.value === "VND") && (b.value === "USD")) {
-                valueDauVao = valueDauVao / 23000;
+                valueDauVao= valueDauVao / 23000;
                 // alert(valueDauVao)
 
             document.getElementById("endLab").innerHTML = valueDauVao;
@@ -64,8 +69,8 @@
         } else  if (((a.value === "VND") && (b.value === "VND")) || ((a.value === "USD") && (b.value === "USD"))) {
                 // alert(valueDauVao);
             document.getElementById("endLab").innerHTML = valueDauVao;
-
         }
+
     }
 
 
