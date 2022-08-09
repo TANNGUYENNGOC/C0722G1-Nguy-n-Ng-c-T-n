@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+<form action="">
+    <input type="text" id="hoVaTen" placeholder="Nhập họ và tên">
+    <input type="text" id="diem" placeholder="Nhập điểm">
+    <input type="button" value="Ấn dể kiểm tra" onclick="xepLoai()">
+    <p id="ketQua"></p>
+</form>
+</body>
+<script !src="">
+    function xepLoai() {
+        let hoVaTen = document.getElementById("hoVaTen").value;
+        hoVaTen = String(hoVaTen);
+
+        let diem = document.getElementById("diem").value;
+        diem = Number(diem);
+
+        if(diem>8){
+            document.getElementById("ketQua").innerHTML = hoVaTen + " xếp loại A"
+        } else if(diem>7){
+            document.getElementById("ketQua").innerHTML = hoVaTen + " xếp loại B"
+        } else if(diem>5){
+            document.getElementById("ketQua").innerHTML = hoVaTen + " xếp loại C"
+        } else {
+            document.getElementById("ketQua").innerHTML = hoVaTen + " Quá gà"
+
+        }
+
+}
+</script>
+</html>

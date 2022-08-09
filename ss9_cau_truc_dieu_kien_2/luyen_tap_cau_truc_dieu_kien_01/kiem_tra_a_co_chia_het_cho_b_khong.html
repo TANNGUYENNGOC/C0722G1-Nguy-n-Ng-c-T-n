@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra a có chia hết cho b không</title>
+</head>
+<body>
+<form action="">
+    <input type="text" id="a" placeholder="Nhập a"></input>
+    <input type="text" id="b" placeholder="Nhập b"></input>
+    <input type="button" value="Kick Me!" onclick="kiemTraAChiaHetChoBKhong()">
+    <input type="reset">
+    <p id="ketQua"></p>
+</form>
+</body>
+<script !src="">
+    function kiemTraAChiaHetChoBKhong() {
+        let a = document.getElementById("a").value;
+        a = Number(a);
+
+        let b = document.getElementById("b").value;
+        b = Number(b);
+
+        if(a%b===0){
+            document.getElementById("ketQua").innerHTML = "a chia hết cho b"
+        } else{
+            document.getElementById("ketQua").innerHTML = "a không chia hết cho b"
+
+        }
+    }
+</script>
+</html>

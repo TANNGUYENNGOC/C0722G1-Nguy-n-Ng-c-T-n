@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điều kiện học sinh vào lớp 10</title>
+</head>
+<body>
+<form action="">
+    <input type="text" id="a" placeholder="Nhập tuổi">
+    <input type="button"  value="Nhấn để kiểm tra" onclick="kiemTra()">
+    <p id="kq"></p>
+</form>
+</body>
+<script !src="">
+    function kiemTra() {
+        let a = document.getElementById("a").value;
+        a = Number(a);
+
+        if(a >= 15){
+            document.getElementById("kq").innerHTML = "Bạn đã đủ điều kiện học lớp 10";
+        } else
+            document.getElementById("kq").innerHTML = "Bạn chưa đủ điều kiện học lớp 10";
+    }
+</script>
+</html>

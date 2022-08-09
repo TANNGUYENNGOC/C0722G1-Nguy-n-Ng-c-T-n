@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm Max của 3 số nguyên</title>
+</head>
+<body>
+<form action="">
+    <input type="text" id="soA" placeholder="Nhập a">
+    <input type="text" id="soB" placeholder="Nhập b">
+    <input type="text" id="soC" placeholder="Nhập c">
+
+    <input type="button" onclick="timMax()" value="kick Me!">
+    <input type="reset">
+    <p id="ketQua"></p>
+</form>
+</body>
+<script !src="">
+    function timMax(){
+        let a = document.getElementById("soA").value;
+        a = Number(a);
+        let b = document.getElementById("soB").value;
+        b = Number(b);
+        let c = document.getElementById("soC").value;
+        c = Number(c);
+
+        if(a>b && a>c){
+            document.getElementById("ketQua").innerHTML = a+ " là giá trị Max"
+        } else {
+            if (b>c){
+                document.getElementById("ketQua").innerHTML = b+ " là giá trị Max"
+            } else {
+                document.getElementById("ketQua").innerHTML = c+ " là giá trị Max"
+            }
+        }
+    }
+
+</script>
+</html>

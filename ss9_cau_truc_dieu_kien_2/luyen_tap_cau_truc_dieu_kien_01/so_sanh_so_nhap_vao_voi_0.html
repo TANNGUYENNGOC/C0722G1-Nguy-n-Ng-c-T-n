@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So sánh số nhập vào với 0</title>
+</head>
+<body>
+<form>
+    <input type="text" id="dauVao" placeholder="Nhập a">
+    <input type="button" value="Kiểm tra" onclick="soSanh()">
+    <p id="ketQua"></p>
+</form>
+</body>
+<script !src="">
+    function soSanh() {
+        let a = document.getElementById("dauVao").value;
+        a = Number(a);
+        if(a>0){
+            document.getElementById("ketQua").innerHTML = a + " là số lớn hơn 0";
+        } else {
+            document.getElementById("ketQua"). innerHTML = a + " là số không lớn hơn 0";
+        }
+    }
+</script>
+</html>

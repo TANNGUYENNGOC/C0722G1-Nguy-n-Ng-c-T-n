@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<style>
+    .banphim{
+        background-color: white;
+        color: blue;
+        width: 70px;
+        height: 70px;
+        font-size: 60px ;
+        border: #a3a0a0 3px solid;
+        border-radius: 10px;
+    }
+    .manhinh {
+        width: 98%;
+        height: 50px;
+        color: orangered;
+        font-size: 60px;
+    }
+    form {
+        border: black 2px solid;
+        width: 23.8%;
+        height: 60%;
+
+    }
+
+
+
+</style>
+<body>
+<form action="">
+    <table>
+        <tr>
+            <td colspan="4">
+                <input class="manhinh" type="text" id="oNhap">
+            </td>
+        </tr>
+        <tr>
+            <td><button class="banphim" type="button" value=""  onclick="mot()"/>1</td>
+            <td><input class="banphim" type="button" value="2" onclick="hai()"></td>
+            <td><input class="banphim" type="button" value="3" onclick="ba()"></td>
+            <td><input class="banphim" type="button" value="+" onclick="cong()"></td>
+
+        </tr>
+        <tr>
+            <td><input class="banphim" type="button"  value="4" onclick="bon()"></td>
+            <td><input class="banphim" type="button"  value="5" onclick="nam()"></td>
+            <td><input class="banphim" type="button"  value="6" onclick="sau()"></td>
+            <td><input class="banphim" type="button"  value="-" onclick="tru()"></td>
+        </tr>
+        <tr>
+            <td><input class="banphim" type="button"  value="7" onclick="bay()"></td>
+            <td><input class="banphim" type="button" value="8" onclick="tam()"></td>
+            <td><input class="banphim" type="button"  value="9" onclick="chin()"></td>
+            <td><input class="banphim" type="button"  value="x" onclick="nhan()"></td>
+        </tr>
+        <tr>
+            <td><input class="banphim" type="reset" value="C"></td>
+            <td><input class="banphim" type="button"  value="0" id="khong" onclick="khong()"></td>
+            <td><input class="banphim" type="button"  value="=" onclick="tinh()"></td>
+            <td><input class="banphim" type="button"  value="/" onclick="chia()"></td>
+        </tr>
+    </table>
+</form>
+</body>
+<script !src="">
+    function mot() {
+        document.getElementById("oNhap").value += 1;
+    }
+    function hai() {
+        document.getElementById("oNhap").value += 2;
+    }
+    function ba() {
+        document.getElementById("oNhap").value += 3;
+    }
+    function bon() {
+        document.getElementById("oNhap").value += 4;
+    }
+    function nam() {
+        document.getElementById("oNhap").value += 5;
+    }
+    function sau() {
+        document.getElementById("oNhap").value += 6;
+    }
+    function bay() {
+        document.getElementById("oNhap").value += 7;
+    }
+    function tam() {
+        document.getElementById("oNhap").value += 8;
+    }
+    function chin() {
+        document.getElementById("oNhap").value += 9;
+    }
+    function khong() {
+        document.getElementById("oNhap").value += 0;
+    }
+    function cong() {
+        document.getElementById("oNhap").value += "+";
+    }
+    function tru() {
+        document.getElementById("oNhap").value += "-";
+    }
+    function nhan() {
+        document.getElementById("oNhap").value += "*";
+    }
+    function chia() {
+        document.getElementById("oNhap").value += "/";
+    }
+    function tinh() {
+
+        let str = document.getElementById("oNhap").value;
+
+        document.getElementById("oNhap").value = eval(str);
+    }
+
+
+</script>
+</html>
