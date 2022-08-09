@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 1</title>
+</head>
+<body>
+<form action="">
+    <b>Giải phương trình bậc 1 có dạng ax + b = 0</b><br><br>
+    <input type="text" id="soA" placeholder="Nhập hệ số a">
+    <input type="text" id="soB" placeholder="Nhập hệ số b">
+    <input type="button" value="Kick Me" onclick="giaiPhuongTrinhBac1()">
+    <p id="kq"></p>
+</form>
+</body>
+<script !src="">
+    function giaiPhuongTrinhBac1(){
+        let a = document.getElementById("soA").value;
+        a = Number(a);
+        let b = document.getElementById("soB").value;
+        b = Number(b);
+        if(a!==0 && b!==0) {
+            document.getElementById("kq").innerHTML = "Nghiệm của phương trình là: " + (-b/a);
+        }
+        else if(a===0 && b!==0){
+            document.getElementById("kq").innerHTML = "Phương trình vô nghiệm";
+        } else {
+            document.getElementById("kq").innerHTML = "Phương trình vô số nghiệm";
+        }
+
+    }
+
+</script>
+</html>

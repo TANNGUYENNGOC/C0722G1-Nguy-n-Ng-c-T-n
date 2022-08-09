@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 2</title>
+</head>
+<body>
+    <b>Giải phương trình bậc 2</b><br><br>
+    <form action="">
+        <input type="text" id="a" placeholder="Hệ số a">
+        <input type="text" id="b" placeholder="Hệ số b">
+        <input type="text" id="c" placeholder="Hệ số c">
+        <input type="button" value="Kick Me!" onclick="giaiPhuongTrinhBacHai()">
+        <p id="ketQua"></p>
+
+    </form>
+
+</body>
+<script !src="">
+   function giaiPhuongTrinhBacHai() {
+       let a = document.getElementById("a").value;
+       a = Number(a);
+       let b = document.getElementById("b").value;
+       b = Number(b);
+       let c = document.getElementById("c").value;
+       c = Number(c);
+
+       let delta = b*b - 4*a*c;
+       if (delta === 0){
+           document.getElementById("ketQua").innerHTML = "Phương trình có 1 nghiệm là: " + (-b/(2*a));
+       } else if (delta > 0) {
+           document.getElementById("ketQua").innerHTML = "Nghiệm của phương trình là: x1 =  "+ ((-b+Math.sqrt(delta))/(2*a))+ " và x2 = " + ((-b-Math.sqrt(delta))/(2*a));
+       } else {
+           document.getElementById("ketQua").innerHTML = "Phương trình vô nghiệm";
+       }
+
+   }
+
+</script>
+</html>

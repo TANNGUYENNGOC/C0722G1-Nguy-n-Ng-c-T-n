@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ met sang feet</title>
+</head>
+<body>
+<form action="">
+    <input style="width: 300px" type="text" id="met" placeholder="Nhập vào số met cần chuyển sang feet">
+    <input type="button" value="Kick Me!" onclick="chuyenMetSangFeet()">
+    <p id="ketQua"></p>
+</form>
+</body>
+<script !src="">
+    function chuyenMetSangFeet() {
+        let m = document.getElementById("met").value;
+        m = Number(m);
+
+        let ft = m * 3.2808;
+        document.getElementById("ketQua").innerHTML = "Sau khi chuyển: "+ft + " feet";
+    }
+</script>
+</html>
