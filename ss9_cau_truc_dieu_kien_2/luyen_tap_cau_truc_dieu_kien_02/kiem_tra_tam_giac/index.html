@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra các giá trị vừa nhập có phải là cạnh của 1 tam giác không</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    // a,b,c > 0
+    // a + b > c
+    // b + c > a
+    // a + c > b
+    let a = prompt("Nhập a");
+    a = Number(a);
+    let b = prompt("Nhập b");
+    b = Number(b);
+
+    let c = prompt("Nhập c");
+    c = Number(c);
+
+
+    if(a>0 && b>0 && c>0){
+        if((a+b) > c){
+            if((b+c) >a){
+                if((a+c) > b){
+                    // document.write("Các số vừa nhập là cạnh của 1 tam giác");
+                    alert("Các số vừa nhập là cạnh của 1 tam giác")
+                }
+            }
+        }
+    } else {
+        // document.write("Các số vừa nhập không phải là cạnh của 1 tam giác");
+        alert("Các số vừa nhập không phải là cạnh của 1 tam giác")
+    }
+
+</script>
+</html>

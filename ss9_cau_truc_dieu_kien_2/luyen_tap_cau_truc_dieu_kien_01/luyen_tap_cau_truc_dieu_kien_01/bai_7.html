@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<form action="">
+
+    <input type="text" id="soPhut" placeholder="Nhập số phút gọi">
+    <p>Vui lòng chọn dịch vụ</p>
+    <select name="" id="luaChon">
+        <option value="noiMang">Cước gọi nội mạng</option>
+        <option value="ngoaiMang">Cước gọi ngoại mạng</option>
+    </select>
+
+    <input type="button" value="Kick Me!" onclick="hamTinhCuoc()">
+    <p id="ketQua"></p>
+</form>
+</body>
+<script !src="">
+    function hamTinhCuoc() {
+        let soPhut = document.getElementById("soPhut").value;
+        soPhut = Number(soPhut);
+        let luaChon = document.getElementById("luaChon").value;
+
+        if(luaChon.value === "noiMang"){
+            document.getElementById("ketQua").innerHTML = + (soPhut*790);
+        } else {
+            document.getElementById("ketQua").innerHTML = +(soPhut*1000);
+        }
+    }
+
+</script>
+</html>
