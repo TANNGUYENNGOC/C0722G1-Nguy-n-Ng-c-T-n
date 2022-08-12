@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp for</title>
+</head>
+<body>
+<p id="demo"></p>
+<form action="">
+    <input type="text" id="dauVao" placeholder="Nhập n">
+    <input type="button" value="Kick" onclick="tongTu1DenN()">
+    <h1 id="ketQua"></h1>
+</form>
+</body>
+<script>
+    let text = "";
+    let i;
+    for (i = 0; i < 5; i++) {
+        text = text+ "The number is " + i + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+
+    function tongTu1DenN() {
+        let n = parseInt(document.getElementById("dauVao").value);
+        let tong = 0;
+
+        for(let i=0; i<=n; ++i){
+            tong = tong+i;
+        }
+        document.getElementById("ketQua").innerHTML = "từ từ 0 đến " +n+" là: "+ tong;
+    }
+
+
+</script>
+</html>

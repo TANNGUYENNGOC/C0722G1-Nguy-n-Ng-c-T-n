@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    let soLuongPhanTuNguyenTo = +prompt("Nhập vào số lượng số nguyên tố cần in ra: ");
+    let dem = 0;
+    let N = 2;
+    while (dem<soLuongPhanTuNguyenTo){
+        let count = 0;
+        for (let i = 2; i< N; i++){
+            if(N%i===0){
+                count +=1;
+                // count = count+1;
+            }
+        }
+        if (count===0){
+            document.write(N + "<br>");
+            dem++;
+        }
+        N++;
+    }
+
+
+
+    // for(let i=1; i<=soLuongGiaTri; i++){
+    //     if(soLuongGiaTri%i===0){
+    //         break;
+    //     }
+
+
+
+
+
+
+</script>
+</html>

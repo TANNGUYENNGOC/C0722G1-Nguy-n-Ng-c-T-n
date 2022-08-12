@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<input type="button" value="Chơi" onclick="game()">
+</body>
+<script>
+    function game() {
+        let numberStart = parseInt(prompt("Nhập vào khoản số bạn muốn chơi: "));
+        let numberRandom = parseInt(Math.random()*numberStart);
+        let luaChon;
+        let count =0;
+
+        do{
+           luaChon = parseInt(prompt("Nhập số bạn đoán"));
+           if(luaChon>numberRandom){
+               alert("số vừa đoán lớn hơn kết quả random");
+               count++;
+           } else if(luaChon===numberRandom){
+               alert("Bạn đã đoán đúng");
+               break;
+           } else {
+               alert("Số vừa nhập nhỏ hơn kết quả random");
+               count++;
+           }
+        }while (count<3);
+        alert("Kết quả random: "+numberRandom);
+    }
+</script>
+</html>

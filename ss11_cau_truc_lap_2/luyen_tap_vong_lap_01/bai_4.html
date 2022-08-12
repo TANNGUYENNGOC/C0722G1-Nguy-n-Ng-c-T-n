@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+
+    let a1 = 0;
+    let a2 = 1;
+    let an;
+    let arr = [];
+    for (let i=0; i<20;i++){
+        document.write(a1 +"\t");
+        arr.push(a1);
+        an = a1 + a2;
+        a1 = a2;
+        a2 = an;
+    }
+
+    for(let i=0; i<arr.length ; i++) {
+        if(arr[i]%5===0){
+            document.write("Phần tử đầu tiên trong dãy chia hết cho 5 là: "+arr[i]);
+            break;
+        }
+    }
+
+
+</script>
+</html>

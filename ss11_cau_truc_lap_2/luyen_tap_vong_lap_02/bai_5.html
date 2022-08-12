@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi</title>
+</head>
+<body>
+
+</body>
+<script>
+    let tienGui = +prompt("Số tiền cần gửi là: ");
+    let thoiHanGui = +prompt('Mày muốn gửi bao nhiêu tháng ??????');
+    for (let i = 1; i <=thoiHanGui ; i++) {
+        tienGui=tienGui*0.012+tienGui;
+    }
+    document.write("Tài khoản sau khi gửi là: "+tienGui);
+</script>
+</html>
