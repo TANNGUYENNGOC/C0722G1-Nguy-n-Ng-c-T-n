@@ -14,10 +14,18 @@
     alert(arrA);
     // document.write("mảng A: "+ arrA);
     let v = +prompt("Nhập V: ");
-    let dem = 0;
+    let a;
     for (let i = 0; i < arrA.length; i++) {
-
+        if (arrA[i] === v) {
+            a = i;
+        }
     }
+        for(let j =a ; j<arrA.length;j++){
+            arrA[j]=arrA[j+1]
+        }
+        arrA[arrA.length -1]=0;
+
+        document.write(arrA.toString());
 
 </script>
 </body>
