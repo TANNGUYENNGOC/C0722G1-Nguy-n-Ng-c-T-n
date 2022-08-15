@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+   let soPhanTuCuaMangA = +prompt("Nhập số phần tử của mảng A: ");
+   let arrA = new Array(soPhanTuCuaMangA);
+   for (let i = 0; i < arrA.length; i++) {
+       arrA[i] = +prompt("Nhập phần tử thứ : "+i)
+   }
+   // alert(arrA);
+    document.write("mảng A: "+ arrA);
+
+   let soPhanTuCuaMangB = +prompt("Nhập số phần tử của mảng B: ");
+   let arrB = new Array(soPhanTuCuaMangB);
+   for (let i = 0; i < arrB.length; i++) {
+       arrB[i] = +prompt("Nhập phần tử thứ : "+i)
+   }
+   // alert(arrB);
+   document.write("mảng B: "+ arrB);
+
+   arrC = [arrA, arrB];
+   document.write("mảng C là: " +arrC);
+
+   // let soPhanTuCuaMangB = prompt("Nhập số phần tử của mảng B: ");
+   // let arrB = new Array(soPhanTuCuaMangB);
+</script>
+</html>

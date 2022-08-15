@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script !src="">
+    let soPhanTuCuaMangA = +prompt("Nhập số phần tử của mảng A: ");
+    let arrA = new Array(soPhanTuCuaMangA);
+    for (let i = 0; i < arrA.length; i++) {
+        arrA[i] = +prompt("Nhập phần tử thứ : "+i)
+    }
+    alert(arrA);
+    // document.write("mảng A: "+ arrA);
+    let v = +prompt("Nhập V: ");
+    let dem = 0;
+    for (let i = 0; i < arrA.length; i++) {
+        if(arrA[i]===v){
+            dem++;
+        }
+    }
+    if(dem>0){
+        document.write("Phần tử "+v+" có tồn tại trong mảng");
+    }else {
+        document.write("Phần tử "+v+" không tồn tại trong mảng");
+    }
+</script>
+</body>
+</html>

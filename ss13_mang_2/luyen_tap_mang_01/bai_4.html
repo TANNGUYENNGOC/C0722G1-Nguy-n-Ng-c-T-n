@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược các phần tử trong mảng</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    let arrINT = [1, 2, 3, 0, -1, -2, 9, 7, 6, 5];
+    let phanTuDauTien = 0;
+    let phanTuCuoiCung = arrINT.length-1;
+    while (phanTuDauTien<phanTuCuoiCung){
+        let z = arrINT[phanTuDauTien];
+        arrINT[phanTuDauTien] = arrINT[phanTuCuoiCung];
+        arrINT[phanTuCuoiCung] = z;
+
+        phanTuDauTien++;
+        phanTuCuoiCung--;
+    }
+    alert("mảng sau khi đảo ngược: "+arrINT);
+</script>
+</html>
