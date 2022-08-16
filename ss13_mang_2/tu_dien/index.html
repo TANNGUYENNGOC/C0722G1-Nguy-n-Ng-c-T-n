@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <input type="text" id="dauVao" placeholder="Nhập từ tiếng Anh mà bạn muốn dịch">
+    <input type="button" value="Dịch" onclick="dich()">
+    <p id="ketQua"></p>
+</form>
+</body>
+<script !src="">
+    function dich() {
+        let vietNam = ["chuối","chó","mèo","xe"];
+        let engLish = ["banana","dog","cat","car"];
+
+        let i;
+
+        let valueNhapVao = document.getElementById("dauVao").value;
+        i = engLish.indexOf(valueNhapVao);
+        if(i=== -1){
+            document.getElementById("ketQua").innerHTML = "từ điển không có từ này";
+        }else {
+            document.getElementById("ketQua").innerHTML = vietNam[i];
+        }
+    }
+</script>
+</html>

@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form action="">
+    <input type="text" id="giaTri" placeholder="Sample Screen">
+    <input type="button" id="add" value="Add" onclick="themPhanTu()">
+    <input type="button" value="Display" onclick="hienThi()">
+    <p id="ketQua"></p>
+<!--    <p id="zxc"></p>-->
+</form>
 </body>
+<script !src="">
+    let x = 0;
+    let arr = [];
+    function themPhanTu() {
+        arr[x] = document.getElementById("giaTri").value;
+        alert("Element: " + arr[x] + " Added at index " + x);
+        x++;
+        document.getElementById("giaTri").value = "";
+    }
+    function hienThi() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + arr[i] + "<br/>";
+        }
+        document.getElementById("ketQua").innerHTML = e;
+    }
+</script>
 </html>

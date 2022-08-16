@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let str =  [ 'm','a', 'c', 's', 'c', '2', '6', '1', '11'];
+    // let number = [1,2,3,4,5,6,7,8,9,0];
+    let demSo = 0;
+    // for (let i = 0; i < str.length; i++) {
+    //     for (let j = 0; j < number.length; j++) {
+    //         if(str[i]==number[j]){
+    //             demSo++;
+    //         }
+    //     }
+    // }
+    for (let i = 0; i < str.length; i++) {
+        if (!isNaN(str[i])) {
+            demSo++;
+        }
+    }
+    alert("Có "+(demSo)+" phần tử kí tự số trong mảng");
+</script>
+</body>
+</html>

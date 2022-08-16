@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let soPhanTu = +prompt("Nhập độ dài chuỗi: ")
+    let arrStr = new Array(soPhanTu);
+    for (let i = 0; i < arrStr.length; i++) {
+        arrStr[i] = prompt("Nhập phần tử thứ "+i);
+    }
+    // alert("chuỗi vừa nhập: "+arrStr);
+    // let arr = ["-","1","a","-"];
+    for (let i = 0; i < arrStr.length; i++) {
+        if(arrStr[i]==="-"){
+            arrStr[i]="_";
+        }
+    }
+    alert(arrStr);
+
+
+</script>
+</body>
+</html>
