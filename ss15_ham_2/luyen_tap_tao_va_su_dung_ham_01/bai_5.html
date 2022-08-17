@@ -6,10 +6,21 @@
 </head>
 <body>
 <script !src="">
-    function Sao(){
-        let arrNgoiSao = ["Polaris","Aldebaran","Deneb","Vega", " Altair", "Dubhe", "Regulus"];
-        let arrNgoiSaoTuongUng = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    let arrNgoiSao = ["Polaris","Aldebaran","Deneb","Vega", " Altair", "Dubhe", "Regulus"];
+    let arrChomSao = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+
+
+    function check(ngoiSao) {
+        for (let i = 0; i < arrNgoiSao.length; i++) {
+            if(ngoiSao===arrNgoiSao[i]){
+                return alert("Ngôi sao "+ngoiSao+" thuộc chòm sao "+arrChomSao[i]);
+                break;
+            }else {
+                return alert("Không tồn tại ngôi sao này trong mảng chòm sao");
+            }
+        }
     }
+    check(prompt("Nhập vào ngôi sao"));
 
 </script>
 </body>

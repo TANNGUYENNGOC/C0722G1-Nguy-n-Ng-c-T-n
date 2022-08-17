@@ -6,17 +6,16 @@
 </head>
 <body>
 <script !src="">
-    function truyenMang() {
-        let doDaiMang = parseInt(prompt("Nhập vào số phần tử của mảng:"));
-        let mang = new Array(doDaiMang);
-
-        for (let i = 0; i < mang.length; i++) {
-            mang[i] = + parseInt(prompt("Nhập phần tử thứ "+i));
-        }
-        document.write("Mảng vừa nhập là: "+mang);
-        document.write("Mảng sau khi được đảo ngược là: "+mang.reverse());
+    function daoMang( arr ) {
+        document.write("Mảng sau khi được đảo ngược là: "+arr.reverse());
     }
-    truyenMang();
+    let doDaiMang = +prompt("Nhập vào độ dài mảng");
+    let arrInt = new Array(doDaiMang);
+    for (let i = 0; i < arrInt.length; i++) {
+        arrInt[i] = +prompt("Nhập phần tử thứ "+i);
+    }
+    document.write("Mảng vừa nhập là: "+arrInt);
+    daoMang(arrInt);
 </script>
 </body>
 </html>

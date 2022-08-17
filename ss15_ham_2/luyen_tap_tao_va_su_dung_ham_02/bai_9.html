@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let doDaiMang = +prompt("Nhập vào độ dài mảng");
+    let mangKiTu = new Array(doDaiMang);
+    for (let i = 0; i < mangKiTu.length; i++) {
+        mangKiTu[i] = prompt("Nhập kí tự thứ "+i);
+    }
+    let kiTuBatKi = prompt("Nhập vào kí tự bất kì")
+
+    // alert("Mảng sau khi thêm: "+mangKiTu);
+    let dem = 0;
+    function kiemTra(mang, kiTu) {
+        for (let i = 0; i <mang.length; i++) {
+            if(mang[i] === kiTu){
+                dem++;
+            }
+        }
+        if(dem>0){
+            return alert(dem)
+        }
+        else {
+            return alert(-1);
+        }
+    }
+    kiemTra(mangKiTu, kiTuBatKi);
+
+</script>
+</body>
+</html>
