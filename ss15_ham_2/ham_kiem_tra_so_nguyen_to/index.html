@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script !src="">
+
+
+    hamKiemTraSoNguyenTo(+prompt("Nhập số cần kiểm tra: "));
+
+    function hamKiemTraSoNguyenTo(x) {
+        let dem = 0;
+        for (let i = 1; i <= x; i++) {
+            if(x%i===0){
+                dem++;
+            }
+        }
+        if(dem===2){
+            return alert(x + " là số nguyên tố");
+        } else {
+            return alert(x+ " không phải là số nguyên tố");
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

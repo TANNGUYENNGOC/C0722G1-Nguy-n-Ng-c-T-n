@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi đơn vị</title>
+</head>
+<body>
+
+
+
+</body>
+<script !src="">
+    let luaChon = +prompt("Nhập lựa chọn của bạn: " +
+        "1.Chuyển Feet sang Meter" +
+        "2.Chuyển Meter sang Feet");
+
+    do {
+        switch (luaChon) {
+            case 1: chuyenFeetSangMeter(+prompt("Nhập số feet"));
+            break;
+            case 2: chuyenMeterSangFeet(+prompt("Nhập số meter"));
+            break;
+        }
+
+    } while (luaChon===0);
+
+
+    function chuyenFeetSangMeter(feet) {
+        return document.write(feet+ " feet = "+(0.305*feet)+ " meter");
+    }
+    function chuyenMeterSangFeet(meter) {
+        return document.write(meter+ "meter = "+(3.279*meter)+ " feet");
+    }
+</script>
+</html>
