@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
+</body>
+<script !src="">
+    // let HinhChuNhat = function (chieuDai, chieuRong) {
+    //     this.chieuDai = chieuDai;
+    //     this.chieuRong = chieuRong;
+    //
+    //     this.getChieuDai = function () {
+    //         return this.chieuDai;
+    //     }
+    //     this.getChieuRong = function () {
+    //         return this.chieuRong;
+    //     }
+    //     this.dienTich = function () {
+    //         return this.chieuDai * this.chieuRong;
+    //     }
+    //     this.chuVi = function () {
+    //         return (this.chieuDai + this.chieuRong) * 2;
+    //     }
+    //
+    //     this.setChieuDai = function (chieuDai) {
+    //         this.chieuDai = chieuDai;
+    //     }
+    //     this.setChieuRong = function (chieuRong) {
+    //         this.chieuRong = chieuRong;
+    //     }
+    //
+    // }
+
+    class ChuNhat {
+        constructor(dai, rong) {
+            this.chieuDai = dai;
+            this.chieuRong = rong;
+        }
+
+        getChieuDai() {
+            return this.chieuDai;
+        }
+
+        getChieuRong() {
+            return this.chieuRong;
+        }
+
+        setChieuDai(chieuDai) {
+            this.chieuDai = chieuDai;
+        }
+
+        setChieuRong(chieuRong) {
+            this.chieuRong = chieuRong;
+        }
+
+        dienTich() {
+            return this.chieuDai * this.chieuRong;
+        }
+
+        chuVi() {
+            return (this.chieuDai + this.chieuRong) * 2;
+        }
+
+        veHinh(toaDoX, toaDoY) {
+            let canvas = document.getElementById("DemoCanvas");
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#bace43';    // color of fill
+            ctx.fillRect(toaDoX, toaDoY, this.chieuDai, this.chieuRong); // create rectangle
+        }
+    }
+
+    // let hinhChuNhat1 = new ChuNhat(100, 100);
+    // let hinhChuNhat2 = new ChuNhat(200, 200);
+    // alert("Diện tích: " + hinhChuNhat1.dienTich());
+    // alert("Diện tích: " + hinhChuNhat1.chuVi());
+    // alert("Chu vi: " + hinhChuNhat1.chuVi());
+    // let chuNhat2 = new ChuNhat();
+    // chuNhat2.setChieuDai(10);
+    // chuNhat2.setChieuRong(20);
+    // alert("diện tích: "+chuNhat2.dienTich());
+    // alert("Chieu rong: "+chuNhat2.getChieuRong());
+    // hinhChuNhat1.veHinh(100,200);
+    // hinhChuNhat2.veHinh(300,300);
+
+    let chuNhat1 = new ChuNhat(200,100);
+    chuNhat1.veHinh(50,100);
+    chuNhat1.setChieuRong(200);
+    chuNhat1.setChieuDai(400);
+    alert("Diện tích chữ nhật là: "+chuNhat1.dienTich());
+    alert("Chu vi chữ nhật là: "+chuNhat1.chuVi());
+    chuNhat1.veHinh(100,200);
+
+</script>
+</html>
