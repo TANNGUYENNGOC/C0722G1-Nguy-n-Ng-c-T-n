@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    class DenDien{
+        constructor(trangThai) {
+            this.trangThai = trangThai;
+        }
+        tinhTrangBongDen(){
+            return this.trangThai;
+        }
+        turnOff(){
+            this.trangThai = false;
+        }
+        turnOn(){
+            this.trangThai = true;
+        }
+    }
+    class CongTac{
+        constructor(trangThaiCongTac, bongDen) {
+            this.trangThaiCongTac = trangThaiCongTac;
+            this.bongDen = bongDen;
+        }
+        bat(){
+            this.trangThaiCongTac = true;
+            this.bongDen.turnOn();
+
+        }
+        tat(tatDen){
+            this.trangThaiCongTac = false;
+            tatDen.trangThai = "không sáng";
+            alert(tatDen.trangThai);
+        }
+    }
+    let den1=new DenDien(false);
+    let ct= new CongTac(false,den1);
+    ct.bat();
+
+</script>
+</html>

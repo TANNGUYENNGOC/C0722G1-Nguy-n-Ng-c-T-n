@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    class QuaTao {
+        constructor() {
+            this.khoiLuong = 10;
+        }
+        kiemTraTinhTrangQuaTao(){
+            return this.khoiLuong;
+    }
+        thayDoiKhoiLuongSauKhiAn(soLuongDaAn){
+            this.khoiLuong=this.khoiLuong-soLuongDaAn;
+        }
+    }
+
+    class Nguoi {
+        constructor(ten, gioiTinh, canNang) {
+            this.ten = ten;
+            this.gioiTinh = gioiTinh;
+            this.canNang = canNang;
+        }
+        noi(phatNgon){
+            alert(this.ten+": "+ phatNgon);
+        }
+        anTao(quaTao){
+            if(quaTao.kiemTraTinhTrangQuaTao()>0){
+                alert("cạp");
+                this.canNang++;
+                quaTao.thayDoiKhoiLuongSauKhiAn(1);
+            }else {
+                alert("còn đâu mà ăn");
+            }
+
+        }
+    }
+    let tao = new QuaTao();
+    let adam = new Nguoi("Adam", "Nam", 70);
+    let eva = new Nguoi("Eva", "Nu", 60);
+    adam.noi("ta muốn ăn táo");
+    adam.anTao(tao);
+    eva.noi("Ta cũng muốn ăn 1 nửa quả táo");
+    eva.anTao(tao);
+    eva.anTao(tao);
+    eva.anTao(tao);
+    eva.anTao(tao);
+    eva.anTao(tao);
+    adam.noi("Táo dỡ quá, ta không ăn nữa");
+
+    let thuongDe = new Nguoi("Ông trời", "Đàn ông", "100");
+    thuongDe.noi("Tại sao quả táo chỉ còn "+tao.kiemTraTinhTrangQuaTao()+" nhiêu KG ????");
+    thuongDe.noi("Các ngươi đã ăn nó rồi, tụi bây phải đăng xuất khỏi vường địa đàn");
+
+</script>
+</html>
