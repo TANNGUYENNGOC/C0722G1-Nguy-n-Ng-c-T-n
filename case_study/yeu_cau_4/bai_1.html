@@ -8,23 +8,47 @@
 <script !src="">
     // Bài 1: Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu không có
     // 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa. Ví dụ tRuong    TaN   HAI => Truong Tan Hai.
-    let nhap = prompt("Nhập tên đầy đủ");
-    nhap=nhap.toLowerCase();
-    let mangTen = nhap.split(" ");
-    let mang = [];
-    for (let i = 0; i < mangTen.length; i++) {
-        if(mangTen[i] !== ""){
-            mang.push(mangTen[i]);
+
+    // function transfer(str) {
+    //     str=str.toLowerCase();
+    //     let newStr = str.split(" ");
+    //     let newStr1 = [];
+    //
+    //     for (let i = 0; i < newStr.length; i++) {
+    //         if(newStr[i] !== ""){
+    //
+    //             newStr1.push(newStr[i].split(""));
+    //         }
+    //     }
+    //     // alert(newStr1);
+    //     for (let i = 0; i < newStr1.length; i++) {
+    //         for (let j = 0; j <newStr1[i].length ; j++) {
+    //             newStr1[i][0] = newStr1[i][0].toUpperCase();
+    //         }
+    //     }
+    //     return newStr1.join(" ");
+    // }
+    // let str = 'tRuong    TaN   HAI';
+    // alert(transfer(str));
+
+    //Làm lại
+    function transfer(str) {
+        str = str.toLowerCase();
+        let newStr = str.split(" ");
+        let newStr1=[];
+        for (let i = 0; i < newStr.length; i++) {
+            if(newStr[i] !== ""){
+                newStr1.push(newStr[i].split(""));
+            }
         }
+        for (let i = 0; i < newStr1.length; i++) {
+                newStr1[i][0] = newStr1[i][0].toUpperCase();
+                newStr1[i]= newStr1[i].join("");
+        }
+        return newStr1.join(" ");
     }
-    let c, cc;
-    alert(mang);
-    for (let i = 0; i < mang.length; i++) {
-        cc=""
-        c=  mang[i].charAt(0).toUpperCase();
-        cc=c+mang[i].charAt(0);
-    }
-    alert(mang);
+    let str = 'tRuong    TaN   HAI';
+    alert(transfer(str));
 </script>
 </body>
 </html>
