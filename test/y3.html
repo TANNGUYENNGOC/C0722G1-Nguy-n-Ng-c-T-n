@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let mangSoNguyen = [2,3,4,5];
+    let mangSoNguyenTo = [];
+    let demSNT = 0;
+
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        let dem = 0;
+        for (let j = 1; j <=mangSoNguyen[i] ; j++) {
+            if(mangSoNguyen[i]%j===0){
+                dem++;
+            }
+        }
+        if(dem===2){
+            mangSoNguyenTo.push(mangSoNguyen[i]);
+        }
+    }
+
+    for (let i = 0; i < mangSoNguyenTo.length; i++) {
+        demSNT = demSNT + 1;
+    }
+    alert("Mảng số nguyen tố: "+mangSoNguyenTo);
+    alert(demSNT);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let numerators = [5,5,2,6];
+    let denominators = [6,4,3,2];
+
+
+    function maxFraction(numerators, denominators)  {
+        let max=0;
+        let viTri=0;
+        for (let i = numerators.length; i >=0 ; i--) {
+            if(numerators[i]/denominators[i]>=max){
+                max = numerators[i]/denominators[i];
+                viTri = i;
+            }
+        }
+        alert(numerators[viTri]+"/"+denominators[viTri]+" là phân số lớn nhất, có chỉ số là: "+viTri);
+        return viTri;
+    }
+    alert(maxFraction(numerators,denominators));
+
+
+</script>
+</body>
+</html>

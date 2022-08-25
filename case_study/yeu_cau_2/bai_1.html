@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let luong = +prompt("Nhập vào lương nhân viên");
+    if(luong>=15000000){
+        document.write("Thuế thu nhập: "+luong*(20/100)+"<br>");
+        document.write("Lương thực sự nhận được: "+(luong - luong*(20/100)));
+    } else if (luong>=7000000){
+        document.write("Thuế thu nhập: "+luong*(10/100)+"<br>");
+        document.write("Lương thực sự nhận được: "+(luong - luong*(10/100)));
+    } else {
+        document.write("Thuế thu nhập: "+luong*(5/100)+"<br>");
+        document.write("Lương thực sự nhận được: "+(luong - luong*(5/100)));
+    }
+
+</script>
+</body>
+</html>

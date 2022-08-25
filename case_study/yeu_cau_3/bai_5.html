@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luaChon;
+    let soLuong;
+    let mang = [];
+    let tong = 0;
+    do {
+        luaChon = +prompt("lựa chọn của bạn là: \n" +
+            "1.Cafe \n" +
+            "2.Cam vắt \n" +
+            "3.Nước ép cà rốt \n" +
+            "4.Nước ép cà chua \n" +
+            "5.Nước lọc \n" +
+            "6.Nước dừa \n" +
+            "7.Thoát gọi món \n");
+        switch (luaChon) {
+            case 1:
+                alert("Cafe 13K/ly");
+                soLuong = +prompt("Nhập số lượng: ")
+                mang.push(13000*soLuong);
+                // alert(soLuong+" có giá là: "+soLuong*13000)
+                break;
+            case 2:
+                alert("Cam vắt 20K/lít");
+                soLuong = +prompt("Nhập số lượng: ")
+                mang.push(20000*soLuong);
+                // alert(soLuong+" có giá là: "+soLuong*20000)
+                break;
+            case 3:
+                alert("Nước ép cà rốt 20k/ly");
+                soLuong = +prompt("Nhập số lượng: ")
+                mang.push(20000*soLuong)
+                // alert(soLuong+" có giá là: "+soLuong*20000)
+                break;
+            case 4:
+                alert("Nước ép cà chua 15k/ly");
+                soLuong = +prompt("Nhập số lượng: ");
+                mang.push(15000*soLuong);
+                // alert(soLuong+" có giá là: "+soLuong*15000)
+                break;
+            case 5:
+                alert("Nước lọc 6k/chai");
+                soLuong = +prompt("Nhập số lượng: ");
+                mang.push(6000*soLuong);
+                // alert(soLuong+" có giá là: "+soLuong*6000)
+                break;
+            case 6:
+                alert("Nước dừa 30k/trái");
+                soLuong = +prompt("Nhập số lượng: ");
+                mang.push(30000*soLuong);
+                // alert(soLuong+" có giá là: "+soLuong*30000)
+                break;
+        }
+    } while (luaChon!==7);
+
+    // alert(mang);
+    for (let i = 0; i < mang.length; i++) {
+        tong = tong + mang[i];
+    }
+    alert("Tổng thanh toán "+ tong);
+
+</script>
+</body>
+</html>

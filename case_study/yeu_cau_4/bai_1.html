@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    // Bài 1: Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu không có
+    // 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa. Ví dụ tRuong    TaN   HAI => Truong Tan Hai.
+    let nhap = prompt("Nhập tên đầy đủ");
+    nhap=nhap.toLowerCase();
+    let mangTen = nhap.split(" ");
+    let mang = [];
+    for (let i = 0; i < mangTen.length; i++) {
+        if(mangTen[i] !== ""){
+            mang.push(mangTen[i]);
+        }
+    }
+    let c, cc;
+    alert(mang);
+    for (let i = 0; i < mang.length; i++) {
+        cc=""
+        c=  mang[i].charAt(0).toUpperCase();
+        cc=c+mang[i].charAt(0);
+    }
+    alert(mang);
+</script>
+</body>
+</html>

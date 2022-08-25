@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let mangSoNguyen = [2,3,4,5];
+
+
+    //Yêu cầu 1
+    // let tongMangSoNguyen = 0;
+    // for (let i = 0; i < mangSoNguyen.length; i++) {
+    //     tongMangSoNguyen = tongMangSoNguyen + mangSoNguyen[i];
+    // }
+
+
+    //Yêu cầu 3
+    // function kiemTra(mang) {
+    //     let demSoAm=0
+    //     for (let i = 0; i < mang.length; i++) {
+    //         if(mang[i]<0){
+    //             demSoAm++;
+    //         }
+    //     }
+    //     if(demSoAm>0){
+    //         alert(true);
+    //         return true;
+    //     } else {
+    //         alert(false);
+    //         return false;
+    //     }
+    // }
+    // kiemTra(mangSoNguyen);
+
+
+
+    //Yêu cầu 2
+    let mangSoNguyenTo = [];
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        let dem = 0;
+        for (let j = 1; j <=mangSoNguyen[i] ; j++) {
+            if(mangSoNguyen[i]%j===0){
+                dem++;
+            }
+        }
+        if(dem===2){
+            mangSoNguyenTo.push(mangSoNguyen[i]);
+        }
+    }
+
+
+
+    // alert("Tổng các phần tử có trong mảng là: "+tongMangSoNguyen);
+    alert("mảng: "+mangSoNguyenTo);
+    let demSNT=0;
+    for (let i = 0; i < mangSoNguyenTo.length; i++) {
+        demSNT = demSNT + 1;
+    }
+    alert("Có "+demSNT+" số nguyên tố");
+</script>
+</body>
+</html>
