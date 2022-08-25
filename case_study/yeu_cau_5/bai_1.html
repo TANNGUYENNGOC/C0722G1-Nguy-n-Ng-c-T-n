@@ -5,29 +5,32 @@
     <title>Title</title>
 </head>
 <body>
-<script !src="">
-    function timSoNguyenTo(mang) {
-        let mangMoi = [];
-
+<script>
+    let mangSo = [[7,2,3,4,5,6,19,25],[1,8,9,10]];
+    function timGiaTriLonNhat(mang) {
+        let max = 0;
         for (let i = 0; i < mang.length; i++) {
-            for (let j = 0; j < mang[i][j]; j++) {
-                let dem = 0;
-                for (let k = 1; k <= mang[i][j]; k++) {
-                    if (mang[i][j] % k === 0) {
-                        dem++;
-                    }
-
-                }
-                if (dem === 2) {
-                    mangMoi.push(mang[i][j]);
+            for (let j = 0; j < mang[i].length; j++) {
+                if(mang[i][j]>=max){
+                    max=mang[i][j];
                 }
             }
-
         }
-        return mangMoi;
+        return max;
     }
-    let mangHaiChieu = [[1,2,3,4,5,6],[7,8,9,10]];
-    alert(timSoNguyenTo(mangHaiChieu));
+    function timGiaTriNhoNhat(mang) {
+        let min= timGiaTriLonNhat(mang);
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if(mang[i][j]<=min){
+                    min=mang[i][j];
+                }
+            }
+        }
+        return min;
+    }
+    alert(timGiaTriLonNhat(mangSo));
+    alert(timGiaTriNhoNhat(mangSo));
 </script>
 </body>
 </html>
