@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="id" placeholder="Nhập Id">
+<input type="text" id="ten" placeholder="Nhập Tên">
+<input type="text" id="tuoi" placeholder="Nhập Tuổi">
+<input type="button" value="Thêm mới sinh viên" onclick="themSinhVien()">
+<p id="display"></p>
+</body>
+<script !src="">
+    class Student{
+        constructor(id, name, age) {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+
+        }
+        setName(name) {
+            this.name=name;
+        }
+        setId(id){
+            this.id = id;
+        }
+        setAge(age){
+            this.age=age;
+        }
+        getId(){
+            return this.id;
+        }
+        getName(){
+            return this.name
+        }
+        getAge(){
+            return this.age;
+        }
+    }
+    let std1 = new Student(1,"Tấn",20);
+    let std2 = new Student(2,"Nguyễn Ngọc Tấn",21);
+    let mangStd = [std1,std2];
+    display(mangStd)
+
+
+    function display(mang) {
+        let tableStd = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>ID</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Age</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < mang.length; i++) {
+            tableStd += '<tr>\n' +
+                '        <td>'+mang[i].getId()+'</td>\n' +
+                '        <td>'+mang[i].getName()+'</td>\n' +
+                '        <td>'+mang[i].getAge()+'</td>\n' +
+                '    </tr>';
+        }
+        tableStd += '</table>';
+        document.getElementById("display").innerHTML = tableStd;
+    }
+    function themSinhVien() {
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let newStd = Student(id,name,age);
+        mangStd.push(newStd);
+        display(mangStd);
+    }
+</script>
+</html>

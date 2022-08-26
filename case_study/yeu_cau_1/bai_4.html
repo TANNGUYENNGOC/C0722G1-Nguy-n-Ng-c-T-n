@@ -12,7 +12,7 @@
 
     for (let i = 1; i <= chieuCaoTamGiac; i++) {
         for (let j = 1; j <= 2*chieuCaoTamGiac-1; j++) {
-            if(j>=trai && j<=phai){
+            if (j == trai || j == phai || i == chieuCaoTamGiac) {
                 document.write("*");
             } else {
                 document.write("&nbsp&nbsp");
