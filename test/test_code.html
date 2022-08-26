@@ -9,30 +9,30 @@
     let mangSoNguyen = [2,3,4,5];
 
 
-    //Yêu cầu 1
-    // let tongMangSoNguyen = 0;
-    // for (let i = 0; i < mangSoNguyen.length; i++) {
-    //     tongMangSoNguyen = tongMangSoNguyen + mangSoNguyen[i];
-    // }
+    // Yêu cầu 1
+    let tongMangSoNguyen = 0;
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        tongMangSoNguyen = tongMangSoNguyen + mangSoNguyen[i];
+    }
 
 
-    //Yêu cầu 3
-    // function kiemTra(mang) {
-    //     let demSoAm=0
-    //     for (let i = 0; i < mang.length; i++) {
-    //         if(mang[i]<0){
-    //             demSoAm++;
-    //         }
-    //     }
-    //     if(demSoAm>0){
-    //         alert(true);
-    //         return true;
-    //     } else {
-    //         alert(false);
-    //         return false;
-    //     }
-    // }
-    // kiemTra(mangSoNguyen);
+    // Yêu cầu 3
+    function kiemTra(mang) {
+        let demSoAm=0
+        for (let i = 0; i < mang.length; i++) {
+            if(mang[i]<0){
+                demSoAm++;
+            }
+        }
+        if(demSoAm>0){
+            alert(true);
+            return true;
+        } else {
+            alert(false);
+            return false;
+        }
+    }
+    kiemTra(mangSoNguyen);
 
 
 

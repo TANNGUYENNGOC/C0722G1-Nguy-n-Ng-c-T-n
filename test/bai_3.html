@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script !src="">
+    // let doDaiMang = +prompt("Nhập vào độ dài mảng");
+    // let mang = new Array(doDaiMang);
+    let mang = [];
+    for (let i = 0; i >=0; i++) {
+        mang[i] = +prompt("Nhập phần tử thứ "+i);
+        if(isNaN(mang[i]) || mang[i]=== 0){
+            break;
+        }
+        if(mang[i]==="0"){
+            continue;
+        }
+    }
+    alert("Các phần tử trong mảng vừa nhập: "+mang);
+
+
+    function sumInput(mang) {
+        let tong = 0;
+        for (let i = 0; i < mang.length ; i++) {
+            if(!isNaN(mang[i])){
+                tong = tong + mang[i];
+            }
+        }
+        // alert(tong);
+        return tong;
+    }
+    alert(sumInput(mang));
+
+</script>
 </body>
 </html>

@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
+<script !src="">
+    let doDaiMang = +prompt("Nhập độ dài mảng: ");
+
+    while (doDaiMang>=50 || doDaiMang<=0){
+        doDaiMang = +prompt("Vui lòng nhập lại");
+    }
+
+    let arr = new Array(doDaiMang);
+
+
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] =+prompt("Nhập phần tử thứ "+i);
+    }
+    // alert("Mảng vừa nhập là: "+arr);
+    document.write("Mảng vừa nhập là: "+arr);
+
+    let arrSoChanTaiViTriLe = [];
+    let dem = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i]%2===0 && i%2!==0){
+            arrSoChanTaiViTriLe.push(arr[i]);
+            dem++;
+        }
+    }
+    let tong = 0;
+    for (let i = 0; i < arrSoChanTaiViTriLe.length; i++) {
+        tong = tong + arrSoChanTaiViTriLe[i];
+    }
+    document.write("Các số chẳn tại vị trí lẻ: "+arrSoChanTaiViTriLe+"<br>");
+    document.write("Trung bình cộng các phần tử chẳn tại vị trí lẻ là: "+ (tong/dem));
+
+</script>
 </html>

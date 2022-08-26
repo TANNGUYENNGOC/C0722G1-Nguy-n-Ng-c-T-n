@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script !src="">
+    // kiemTraSoNguyenTo(parseInt(prompt("Nhập vào số")));
+    hienThi(+prompt("Nhập vào 1 số"));
+
+
+    function hienThi(so) {
+        for (let i = 0; i <= so; i++) {
+            if(kiemTraSoNguyenTo(i)===false){
+                document.write(i+", ");
+            }
+        }
+        return;
+    }
+
+    function kiemTraSoNguyenTo(so) {
+        let dem = 0;
+        for (let i = 0; i <= so; i++) {
+            if(so%i===0){
+                dem++;
+            }
+        }
+        if(dem===2){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+</script>
 </body>
 </html>

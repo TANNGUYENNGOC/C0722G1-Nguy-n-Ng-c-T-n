@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script !src="">
+    let mangThuNhat = [1,2,3,4,5,6];
+    let mangThuHai = [3,4,5];
+    let mangTrungGian1 = [];
+    let  mangTrungGian2 = [];
+    let dem = 0;
+    function kiemTra(mang1, mang2) {
+        for (let i = 0; i < mang2.length; i++) {
+            for (let j = 0; j < mang1.length; j++) {
+                if (mang1[j] === mang2[i]) {
+                    mangTrungGian1.push(mang2[i]);
+                }
+            }
+        }
+        for (let i = 0; i < mang1.length; i++) {
+            for (let j = 0; j < mang2.length; j++) {
+                if (mang1[i] === mang2[j]) {
+                    mangTrungGian2.push(mang2[j]);
+                }
+            }
+        }
+        mangTrungGian2.length=mangTrungGian1.length;
+
+        for (let i = 0; i < mangTrungGian2.length; i++) {
+            if(mangTrungGian1[i]===mangTrungGian2[i]){
+                dem++;
+            }
+        }
+        if (dem===mangTrungGian2.length){
+            return alert(true);
+        } else {
+            return alert(false);
+        }
+    }
+    //  let abc= JSON.stringify(mangTrungGian1)===JSON.stringify(mangThuHai);
+    // alert(abc);
+
+    // alert("mảng trung gian 1: "+mangTrungGian1);
+    // alert("mảng trung gian 2: "+mangTrungGian2);
+    kiemTra(mangThuNhat,mangThuHai);
+    // alert("Mảng thứ nhất: "+mangThuNhat);
+
+</script>
 </body>
 </html>

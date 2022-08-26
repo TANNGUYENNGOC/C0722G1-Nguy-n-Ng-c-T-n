@@ -5,6 +5,33 @@
     <title>Title</title>
 </head>
 <body>
+<script !src="">
+    // let mang2Chieu = [[1,2,3,4,5,6],[7,8,9,10,11,12]];
 
+
+    let m = +prompt("Nhập m so hang: ");
+    let n = +prompt("Nhập n: ");
+    let mang = new Array(m);
+    for (let i = 0; i < mang.length; i++) {
+        mang[i] = new Array(n);
+        for (let j = 0; j <mang[i].length ; j++) {
+            mang[i][j] = +prompt("Nhập phần tử:"+i+"-"+j);
+        }
+    }
+    alert(mang);
+
+    function tongCacSoChan(mang) {
+        let tongChan = 0;
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if(mang[i][j]%2===0){
+                    tongChan = tongChan + mang[i][j];
+                }
+            }
+        }
+        return tongChan;
+    }
+    alert(tongCacSoChan(mang));
+</script>
 </body>
 </html>

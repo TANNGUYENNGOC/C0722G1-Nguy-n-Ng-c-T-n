@@ -2,9 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Vẽ trên canvas</title>
 </head>
 <body>
-$END$
+    <canvas id="duongThang" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+    <canvas id="hinhTron" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+    <canvas id="veChu" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
 </body>
+<script !src="">
+    // vẽ đường thẳng
+    let c = document.getElementById("duongThang");
+    let ctx = c.getContext("2d");
+    ctx.moveTo(0,0); //định điểm bắt đầu
+    ctx.lineTo(200,100); //định điểm kết thúc
+    ctx.stroke(); //hàm để bắt đầu vẽ
+
+
+    //Vẽ hình tròn
+
+    let duongTron = document.getElementById("hinhTron");
+    let a = duongTron.getContext("2d");
+    // a.beginPath();
+    a.arc(95,50,40,0,2*Math.PI); //hàm arc để vẽ hình tròn; arc(x,y,r,start,stop);
+    a.stroke();
+
+    //vẽ chữ
+    let veChu = document.getElementById("veChu");
+    let b = veChu.getContext("2d");
+    b.font = "30px Arial";
+    b.fillText("Hello World",10,50); //Viết chữ trên ô canvas
+
+    //Hiệu ứng Gradient
+    // let c = document.getElementById("myCanvas");
+    // let ctx = c.getContext("2d");
+    // // Create gradient
+    // let grd = ctx.createLinearGradient(0,0,200,0);
+    // grd.addColorStop(0,"red");
+    // grd.addColorStop(1,"white");
+    // // Fill with gradient
+    // ctx.fillStyle = grd;
+    // ctx.fillRect(10,10,150,80);
+
+    //Hiệu ứng gradient tròn
+    // var c = document.getElementById("myCanvas");
+    // var ctx = c.getContext("2d");
+    //
+    // // Create gradient
+    // var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+    // grd.addColorStop(0,"red");
+    // grd.addColorStop(1,"white");
+    //
+    // // Fill with gradient
+    // ctx.fillStyle = grd;
+    // ctx.fillRect(10,10,150,80);
+</script>
 </html>

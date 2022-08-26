@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script !src="">
+    let arrStr = ['q','w','e','Z','X','C','V'];
+    checkString(arrStr);
+    function checkString(str) {
+        let chuThuong = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','n'];
+        let dem = 0;
+        for (let i = 0; i < str.length; i++) {
+            if(chuThuong.includes(str[i])){
+                dem++
+            }
+        }
+        if(dem === str.length-dem){
+            alert(true);
+            return true;
+        } else {
+            alert(false);
+            return false
+        }
+    }
+</script>
 </body>
 </html>

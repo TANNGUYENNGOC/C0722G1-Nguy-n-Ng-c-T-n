@@ -6,17 +6,46 @@
 </head>
 <body>
 <script>
+    let newS = [];
+
     function commonCharacterCount(s1, s2) {
         let mangS1 = s1.split("");
         let mangS2 = s2.split("");
-        let newS = [];
-        for (let i = 0; i < ; i++) {
-            
+        for (let i = 0; i < mangS1.length; i++) {
+            for (let j = 0; j < mangS2.length; j++) {
+                if(mangS1[i]===mangS2[j]){
+                    newS.push(mangS1[i]);
+                    mangS1.splice(i,1);
+                    mangS2.splice(j,1);
+                    i--;
+                    j--;
+                }
+            }
+        }
+        return newS;
+    }
+    function demSoLanXuatHienCuaPhanTu(mang) {
+        let x=[];
+        for (let i = 0; i < mang.length; i++) {
+            if (x.indexOf(mang[i])==-1){
+                x.push(mang[i]);
+                let dem = 0;
+                for (let j = 0; j < mang.length; j++) {
+                    if(mang[i]===mang[j]){
+                        dem++;
+                    }
+                }
+                document.write("Số lần xuất hiện phần tử "+mang[i] +" là: "+dem+"<br>");
+            }
         }
     }
     let s1 = "aabcc";
     let s2 = "adcaa";
-    alert(commonCharacterCount(s1,s2));
+    // alert(commonCharacterCount(s1,s2));
+    // alert(demSoLanXuatHienCuaPhanTu(newS));
+    document.write("Phần tử chung của 2 mảng: "+commonCharacterCount(s1,s2)+"<br>");
+    // alert(newS);
+    demSoLanXuatHienCuaPhanTu(newS);
 </script>
 </body>
 </html>
