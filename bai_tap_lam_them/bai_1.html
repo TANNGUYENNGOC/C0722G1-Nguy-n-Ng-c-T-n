@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    let doDaiMang;
+    let mangKetQua = [];
+    let trungBInhCongKetQua = 0;
+    do{
+        doDaiMang = +prompt("Nhập vào số phần tử của mảng (<=50)");
+    }while (doDaiMang>=50 || doDaiMang<=0);
+    let mangSoNguyen = new Array(doDaiMang);
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        mangSoNguyen[i] = +prompt("Nhập phần tử thứ "+i);
+    }
+    alert(mangSoNguyen)
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        if(i%3===0 && mangSoNguyen[i]%5===0){
+            mangKetQua.push(mangSoNguyen[i]);
+        }
+    }
+    alert(mangKetQua);
+    for (let i = 0; i < mangKetQua.length; i++) {
+        trungBInhCongKetQua = trungBInhCongKetQua + mangKetQua[i];
+    }
+    alert("Kết quả: "+(trungBInhCongKetQua/mangKetQua.length));
+</script>
+</html>

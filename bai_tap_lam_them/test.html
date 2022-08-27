@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    let sting = prompt("Nhập chuỗi");
+    let alphabet = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"]
+    let upAlphabet = alphabet.toUpperCase();
+    alert(upAlphabet)
+    let number = ["0","1","2","3","4","5","6","7","8","9"];
+    let emptyArr = [];
+    function display(sting) {
+        for (let i = 0; i < sting.length; i++) {
+            if (alphabet.includes(sting[i])===false && upAlphabet.includes(sting[i])===false && number.includes(sting[i])===false) {
+
+
+                emptyArr.push(sting[i]);
+            }
+        }
+        alert(emptyArr);
+    }
+    display(sting)
+</script>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="kq"></p>
+<input type="text" id="mamay" placeholder="Nhập mã máy">
+<input type="text" id="tenmay" placeholder="Nhập tên máy">
+<input type="text" id="tenhang" placeholder="Nhập tên hãng">
+<input type="text" id="giaban" placeholder="Nhập giá bán">
+<input type="button" value="Thêm mới" onclick="themMoi()">
+</body>
+<script !src="">
+    class MayTinh {
+        constructor(maMay, tenMay, tenHang, giaBan) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.tenHang = tenHang;
+            this.giaBan = giaBan;
+        }
+        getMaMay(){
+            return this.maMay;
+        }
+        getTenMay(){
+            return this.tenMay;
+        }
+        getTenHang(){
+            return this.tenHang;
+        }
+        getGiaBan(){
+            return this.giaBan;
+        }
+        setMaMay(maMay){
+            this.maMay = maMay;
+        }
+        setTenMay(tenMay){
+            this.tenMay = tenMay;
+        }
+        setTenHang(tenHang){
+            this.tenHang = tenHang;
+        }
+        setGiaBan(giaBan){
+            this.giaBan = giaBan;
+        }
+    }
+    let mayTinh1 = new MayTinh("MT001","Dell 2022","Dell",20000000);
+    let mayTinh2 = new MayTinh("MT002","Acer Gamming","Acer",13000000);
+    let mayTinh3 = new MayTinh("MT003","Asus 2018","Asus",25000000);
+    let listMayTinh = [mayTinh1,mayTinh2,mayTinh3];
+    hienThi(listMayTinh);
+
+    function sua(index) {
+        listMayTinh[index].setMaMay(prompt("Nhập mã máy"));
+        listMayTinh[index].setTenMay(prompt("Nhập tên máy"));
+        listMayTinh[index].setTenHang(prompt("Nhập tên hãng"));
+        listMayTinh[index].setGiaBan(prompt("Nhập giá bán"));
+        hienThi(listMayTinh);
+    }
+    function xoaMay(index) {
+        listMayTinh.splice(index,1);
+        hienThi(listMayTinh);
+    }
+    function themMoi() {
+        let maMay = document.getElementById("mamay").value;
+        let tenMay = document.getElementById("tenmay").value;
+        let tenHang = document.getElementById("tenhang").value;
+        let giaBan = document.getElementById("giaban").value;
+        let mayMoi = new MayTinh(maMay,tenMay,tenHang,giaBan);
+        listMayTinh.push(mayMoi);
+        hienThi(listMayTinh);
+    }
+    function hienThi(list) {
+        let bangMay = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Mã máy</th>\n' +
+            '        <th>Tên máy</th>\n' +
+            '        <th>Tên hãng</th>\n' +
+            '        <th>Giá bán</th>\n' +
+            '        <th>Xóa</th>\n' +
+            '        <th>Sửa</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < list.length; i++) {
+            bangMay += '<tr>\n' +
+                '        <td>'+(i+1)+'</td>\n' +
+                '        <td>'+list[i].getMaMay()+'</td>\n' +
+                '        <td>'+ list[i].getTenMay()+'</td>\n' +
+                '        <td>'+ list[i].getTenHang()+'</td>\n' +
+                '        <td>'+list[i].getGiaBan()+'</td>\n' +
+                '        <td><input type="button" value="Xóa" onclick="xoaMay('+i+')"></td>\n' +
+                '        <td><input type="button" value="Sửa" onclick="sua('+i+')"></td>\n' +
+                '    </tr>';
+        }
+        bangMay += '</table>';
+        document.getElementById("kq").innerHTML = bangMay;
+    }
+</script>
+</html>
