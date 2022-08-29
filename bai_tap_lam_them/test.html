@@ -8,22 +8,31 @@
 
 </body>
 <script !src="">
-    let sting = prompt("Nhập chuỗi");
-    let alphabet = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"]
-    let upAlphabet = alphabet.toUpperCase();
-    alert(upAlphabet)
-    let number = ["0","1","2","3","4","5","6","7","8","9"];
-    let emptyArr = [];
-    function display(sting) {
-        for (let i = 0; i < sting.length; i++) {
-            if (alphabet.includes(sting[i])===false && upAlphabet.includes(sting[i])===false && number.includes(sting[i])===false) {
+    // <!--Viết 1 hàm truyền vào 1 tham số(với tham số là 1 chuỗi),-->
+    // <!--(checkString(str)). Hàm trả về mảng các kí tự không phải là -->
+    // <!--số[0,...9] và không phải kí tự alphabe[a..z,A...Z].-->
 
-
-                emptyArr.push(sting[i]);
+    function checkString(str) {
+        let chuoiKiTu = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890';
+        let mangKiTu = chuoiKiTu.split("");
+        let mangMoi = [];
+        let mangKiTuDauVao = str.split("");
+        for (let i = 0; i < mangKiTuDauVao.length; i++) {
+            if(mangKiTu.includes(mangKiTuDauVao[i])===false){
+                mangMoi.push(mangKiTuDauVao[i]);
             }
+            // if(mangKiTu.includes(mangKiTuDauVao[i])===true){
+            //     mangMoi.push(mangKiTuDauVao[i]);
+            // }
+
+            // for (let j = 0; j < mangKiTu.length; j++) {
+            //     if(mangKiTuDauVao[i]!==mangKiTu[j]){
+            //         mangMoi.push(mangKiTuDauVao[i]);
+            //     }
+            // }
         }
-        alert(emptyArr);
+        return document.write(mangMoi+"");
     }
-    display(sting)
+    checkString(prompt("Nhập vào 1 chuỗi"));
 </script>
 </html>

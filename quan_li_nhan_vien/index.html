@@ -2,9 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="text" id="id" placeholder="Nhập id">
+<input type="text" id="ten" placeholder="Nhập tên">
+<input type="text" id="tuoi" placeholder="Nhập tuổi">
+<input type="text" id="gioiTinh " placeholder="Nhập giới tính">
+<input type="button" value="Thêm nhân viên" onclick="themNhamVien()">
+<p id="hienThi"></p>
 </body>
+<script !src="">
+    class NhanVien {
+        constructor(id, ten, tuoi, gioiTinh) {
+            this.id = id;
+            this.ten = ten;
+            this.tuoi = tuoi;
+            this.gioiTinh = gioiTinh;
+        }
+        getId(){
+            return this.id;
+        }
+        getTen(){
+            return this.ten;
+        }
+        getTuoi(){
+            return this.tuoi;
+        }
+        getGioiTinh(){
+            return this.gioiTinh;
+        }
+        setId(id){
+            this.id = id;
+        }
+        setTen(ten){
+            this.ten = ten;
+        }
+        setTuoi(tuoi){
+            this.tuoi = tuoi;
+        }
+        setGioiTinh(gioiTinh){
+            this.gioiTinh = gioiTinh;
+        }
+    }
+    
+    let nhanVien1 = new NhanVien("NV001","Võ Tấn Tường",20,"Đực");
+    let nhanVien2 = new NhanVien("NV002","Phạm Hồng Ngoan",20,"Đực");
+    let nhanVien3 = new NhanVien("NV003","Doãn Chí Bình",37,"Đực");
+    let listNhanVien = [nhanVien1,nhanVien2,nhanVien3];
+    hienThi(listNhanVien);
+
+
+    function themNhamVien() {
+        let nhanVienMoi = new NhanVien(document.getElementById("id").value,document.getElementById("ten").value,document.getElementById("tuoi").value,document.getElementById("gioiTinh ").value);
+        listNhanVien.push(nhanVienMoi);
+        hienThi(listNhanVien);
+    }
+    function xoaNhanVien(index) {
+        listNhanVien.splice(index,1);
+        hienThi(listNhanVien);
+    }
+    function suaThongTinNhanVien(index) {
+        listNhanVien[index].setId(prompt("Nhập id"));
+        listNhanVien[index].setTen(prompt("Nhập tên"));
+        listNhanVien[index].setTuoi(prompt("Nhập tuổi"));
+        listNhanVien[index].setGioiTinh(prompt("Nhập giới tính"));
+        hienThi(listNhanVien);
+    }
+    function hienThi(list){
+        let tableNhanVien = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>ID</th>\n' +
+            '        <th>Họ và tên</th>\n' +
+            '        <th>Tuổi</th>\n' +
+            '        <th>Giới tính</th>\n' +
+            '        <th>Xóa</th>\n' +
+            '        <th>Sửa</th>\n' +
+            '    </tr>';
+        for (let i = 0; i <list.length ; i++) {
+            tableNhanVien += '<tr>\n' +
+                '        <td>'+(i+1)+'</td>\n' +
+                '        <td>'+list[i].getId()+'</td>\n' +
+                '        <td>'+list[i].getTen()+'</td>\n' +
+                '        <td>'+list[i].getTuoi()+'</td>\n' +
+                '        <td>'+list[i].getGioiTinh()+'</td>\n' +
+                '        <td><input type="button" value="Xóa" onclick="xoaNhanVien('+ i +')"></td>\n' +
+                '        <td><input type="button" value="Sửa" onclick="suaThongTinNhanVien('+ i +')"></td>\n' +
+                '    </tr>'
+        }
+        tableNhanVien += '</table>';
+        document.getElementById("hienThi").innerHTML = tableNhanVien;
+    }
+
+
+</script>
 </html>

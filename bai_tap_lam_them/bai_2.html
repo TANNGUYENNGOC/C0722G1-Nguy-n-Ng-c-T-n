@@ -9,10 +9,26 @@
 </body>
 <script !src="">
     function vietTat(chuoi) {
-        let mangChuoi = chuoi.split(" ");
-        let mangChuoi1 = mangChuoi.split(" ");
-        alert(mangChuoi1);
+        chuoi = chuoi.toUpperCase();
+        let chuoimoi = chuoi.split(" ");
+        let mangchuoi = [];
+        if(chuoimoi.length >=2){
+            let kq = [];
+            for (let i = 0; i < chuoimoi.length; i++) {
+                if(chuoimoi[i] !== ""){
+                    mangchuoi.push(chuoimoi[i].split(""));
+                }
+            }
+            for (let i = 0; i < mangchuoi.length; i++) {
+                kq.push(mangchuoi[i][0]);
+            }
+            return kq.join("");
+
+        } else if(chuoimoi.length===1){
+            return "chuỗi chỉ có 1 từ nên không cần viết tắt";
+        }
+
     }
-    vietTat(prompt("Nhập vào chuỗi"));
+    alert(vietTat(prompt("Nhập vào chuỗi")));
 </script>
 </html>

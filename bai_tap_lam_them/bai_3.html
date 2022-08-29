@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    let mangDauVao = [1,5,6,13,9,12,8,0,5,1];
+    alert(sapXepFibonacci(mangDauVao));
+    function sapXepFibonacci(mang) {
+        // tìm giá trị lớn nhất của mảng
+        let max = 0;
+        for (let i = 0; i < mang.length; i++) {
+            if(mang[i]>=max){
+                max = mang[i];
+            }
+        }
+
+        //mảng fibonaci có độ dài là max+1
+
+        let fibonacci = 0;
+        let fibonacci1 = 1;
+        let fibonacciN = 0;
+        let mangfibonacci = [];
+        for (let i = 0; i < max; i++) {
+
+            fibonacciN = fibonacci + fibonacci1;
+            fibonacci1 = fibonacci;
+            fibonacci = fibonacciN;
+            mangfibonacci.push(fibonacciN);
+        }
+        mangfibonacci.unshift(0);
+
+        //các phần tử của mảng truyền vào tồn tại trong mảng fibonacci thì thêm vào mảng KQ
+        let mangKQ = [];
+        for (let i = 0; i < mang.length; i++) {
+            if(mangfibonacci.includes(mang[i])===true){
+                mangKQ.push(mang[i]);
+            }
+        }
+
+        //Sắp xếp tăng dần mảng kết quả
+        mangKQ.sort(function (a, b) {
+            return a - b;
+        });
+        return mangKQ;
+    }
+</script>
+</html>
